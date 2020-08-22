@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "Pwn2Wmdcu4jePgkbvFsviA2iAsh+CA8Ubnjn3j0otB1VzyQLQ8vWY8A8pqkS6ISMKDJDmCRQgz7i72rPnj8Edw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\frodo\\Source\\Repos\\git\\devboost.droneDelivery\\GeoLocation\\GeoLocation.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\frodo\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\3.1.7\\microsoft.aspnetcore.jsonpatch.3.1.7.nupkg.sha512",
+    "C:\\Users\\frodo\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\3.1.7\\microsoft.aspnetcore.mvc.newtonsoftjson.3.1.7.nupkg.sha512",
+    "C:\\Users\\frodo\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\frodo\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512",
+    "C:\\Users\\frodo\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\newtonsoft.json.bson.1.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}
