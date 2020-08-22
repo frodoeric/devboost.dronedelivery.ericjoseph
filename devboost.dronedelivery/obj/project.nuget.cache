@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sZ1XdXYzC9z1BKwUezM6FjScAoa2fxxGSKk5wGqZv+DFdQZXBq4AW3uJf3KAi/H1utm4xrnW51Zh93METKiTuw==",
+  "dgSpecHash": "oImxv34A/1iVXrPaWUebCWfN1/7sxdYB6ovFxIGVxiQO08vK4NRSz0iy4leh1FCOoVXRJYpWlmQxribk6J2uzg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\frodo\\Source\\Repos\\git\\devboost.droneDelivery\\devboost.dronedelivery\\devboost.dronedelivery.csproj",
+  "projectFilePath": "C:\\Users\\frodo\\Source\\Repos\\devboost.dronedelivery.ericjoseph\\devboost.dronedelivery\\devboost.dronedelivery.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\frodo\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\3.1.7\\microsoft.aspnetcore.jsonpatch.3.1.7.nupkg.sha512",
     "C:\\Users\\frodo\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\3.1.7\\microsoft.aspnetcore.mvc.newtonsoftjson.3.1.7.nupkg.sha512",

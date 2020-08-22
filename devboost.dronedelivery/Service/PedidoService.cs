@@ -5,6 +5,7 @@ using GeoLocation;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 using System.Transactions;
 
@@ -13,8 +14,8 @@ namespace devboost.dronedelivery.Service
     public class PedidoService
     {
         //readonly static DbGeography LOCATION_ORIGINB = DbGeography.FromText("POINT(-23.5880684 -46.6564195)");
-        const double longitude = -23.5880684;
-        const double latitude = -46.6564195;
+        const double latitude = -23.5880684;
+        const double longitude = -46.6564195;
 
         readonly PedidoRepository _pedidoRepository;
         readonly DroneRepository _droneRepository;
@@ -57,6 +58,7 @@ namespace devboost.dronedelivery.Service
 
                     //Qual automomia atual do drone = (Autonomia * Carga) / 100
                     //Temos que pegar os Drones com AA >= Distancia do Pedido * 2
+
                     var dronesDispAutonomia = drones?.Where(x => (((x.Autonomia * x.Carga) / 100) * x.Velocidade) >= (distance * 2))?.ToList();
 
                     //Dos Drones com autonomia, quais podem carregar o peso do pedido
@@ -68,7 +70,9 @@ namespace devboost.dronedelivery.Service
                         var drone = dronesComCapacidade.FirstOrDefault();
                         pedido.Drone = drone;
                         pedido.StatusPedido = StatusPedido.despachado;
-                        drone.StatusDrone = StatusDrone.emTrajeto;
+
+                        drone = AtualizaStatusDrone(drone, distance);
+                        
                         await _pedidoRepository.AddPedido(pedido);
                         await _droneRepository.UpdateDrone(drone);
                     }
@@ -87,6 +91,21 @@ namespace devboost.dronedelivery.Service
                 throw;
             }
             
+        }
+
+        private Drone AtualizaStatusDrone(Drone drone, double distance)
+        {
+            drone.StatusDrone = StatusDrone.emTrajeto;
+
+            var autonimiaDistancia = ((drone.Autonomia * drone.Carga) / 100) * drone.Velocidade;
+            var distanciaPercorrida = autonimiaDistancia - distance;
+            var cargaUsada = distanciaPercorrida / drone.Velocidade;
+            drone.Carga -= Convert.ToInt32(cargaUsada);
+
+            //tenho 100km andei 70km me resta 30 quantos porcento?
+            //
+
+            return drone;
         }
     }
 }

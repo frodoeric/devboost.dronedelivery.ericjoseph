@@ -5382,11 +5382,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\frodo\\Source\\Repos\\git\\devboost.droneDelivery\\devboost.dronedelivery\\devboost.dronedelivery.csproj",
+      "projectUniqueName": "C:\\Users\\frodo\\Source\\Repos\\devboost.dronedelivery.ericjoseph\\devboost.dronedelivery\\devboost.dronedelivery.csproj",
       "projectName": "devboost.dronedelivery",
-      "projectPath": "C:\\Users\\frodo\\Source\\Repos\\git\\devboost.droneDelivery\\devboost.dronedelivery\\devboost.dronedelivery.csproj",
+      "projectPath": "C:\\Users\\frodo\\Source\\Repos\\devboost.dronedelivery.ericjoseph\\devboost.dronedelivery\\devboost.dronedelivery.csproj",
       "packagesPath": "C:\\Users\\frodo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\frodo\\Source\\Repos\\git\\devboost.droneDelivery\\devboost.dronedelivery\\obj\\",
+      "outputPath": "C:\\Users\\frodo\\Source\\Repos\\devboost.dronedelivery.ericjoseph\\devboost.dronedelivery\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\frodo\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5402,8 +5402,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\frodo\\Source\\Repos\\git\\devboost.droneDelivery\\GeoLocation\\GeoLocation.csproj": {
-              "projectPath": "C:\\Users\\frodo\\Source\\Repos\\git\\devboost.droneDelivery\\GeoLocation\\GeoLocation.csproj"
+            "C:\\Users\\frodo\\Source\\Repos\\devboost.dronedelivery.ericjoseph\\GeoLocation\\GeoLocation.csproj": {
+              "projectPath": "C:\\Users\\frodo\\Source\\Repos\\devboost.dronedelivery.ericjoseph\\GeoLocation\\GeoLocation.csproj"
             }
           }
         }

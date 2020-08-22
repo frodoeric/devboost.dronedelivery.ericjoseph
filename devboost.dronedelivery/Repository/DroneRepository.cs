@@ -19,7 +19,7 @@ namespace devboost.dronedelivery.Repository
 
         public async Task<List<Drone>> GetDisponiveis()
         {
-            return await _dataContext.Drone.Where(x => (int)x.StatusDrone == (int)StatusDrone.disponivel).ToListAsync();
+            return await _dataContext.Drone.Include(x => x.Pedidos).Where(x => (int)x.StatusDrone != (int)StatusDrone.indisponivel).ToListAsync();
         }
 
         public async Task UpdateDrone(Drone drone)

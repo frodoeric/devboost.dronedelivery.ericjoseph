@@ -227,11 +227,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\frodo\\Source\\Repos\\git\\devboost.droneDelivery\\GeoLocation\\GeoLocation.csproj",
+      "projectUniqueName": "C:\\Users\\frodo\\Source\\Repos\\devboost.dronedelivery.ericjoseph\\GeoLocation\\GeoLocation.csproj",
       "projectName": "GeoLocation",
-      "projectPath": "C:\\Users\\frodo\\Source\\Repos\\git\\devboost.droneDelivery\\GeoLocation\\GeoLocation.csproj",
+      "projectPath": "C:\\Users\\frodo\\Source\\Repos\\devboost.dronedelivery.ericjoseph\\GeoLocation\\GeoLocation.csproj",
       "packagesPath": "C:\\Users\\frodo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\frodo\\Source\\Repos\\git\\devboost.droneDelivery\\GeoLocation\\obj\\",
+      "outputPath": "C:\\Users\\frodo\\Source\\Repos\\devboost.dronedelivery.ericjoseph\\GeoLocation\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\frodo\\AppData\\Roaming\\NuGet\\NuGet.Config",
