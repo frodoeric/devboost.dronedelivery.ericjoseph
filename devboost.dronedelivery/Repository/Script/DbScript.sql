@@ -50,10 +50,10 @@ GO
 INSERT INTO [Drone] ([Id], [Capacidade], [Velocidade], [Autonomia],	[Carga], [Status])
 VALUES
     -- ID, Capacidade KG, Velocidade KM/H, Autonomia Hrs, Carga em %, Status
-    (1, 12, 35, 25, 100, 1),
-    (2, 7, 25, 35, 50, 1),
-    (3, 5, 25, 35, 25, 1),
-    (4, 10, 40, 120, 100, 1),
-    (5, 8, 60, 120, 100, 1),
-    (6, 7, 50, 120, 20, 1)
+    (1, 12, 135, 25, 100, 1),
+    (2, 7, 80, 35, 50, 1),
+    (3, 5, 80, 35, 25, 1),
+    (4, 10, 80, 35, 100, 1),
+    (5, 8, 80, 30, 100, 1),
+    (6, 7, 80, 20, 20, 1)
 GO
