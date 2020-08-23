@@ -21,6 +21,8 @@ namespace devboost.dronedelivery.Model
     {
         indisponivel = 0,
         disponivel = 1,  
-        emTrajeto = 2
+        emTrajeto = 2,
+        disponivelParaEntrega = 3
+        
     }
 }

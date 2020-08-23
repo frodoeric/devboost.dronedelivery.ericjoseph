@@ -2,6 +2,7 @@
 using devboost.dronedelivery.Model;
 using devboost.dronedelivery.Service;
 using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Threading.Tasks;
 
 namespace devboost.dronedelivery.Controllers
@@ -27,19 +28,35 @@ namespace devboost.dronedelivery.Controllers
         [HttpPost]
         public async Task<ActionResult> Post([FromBody] PedidoDTO pedidoDto)
         {
-            //try
-            //{
+            try
+            {
+                var result = await _pedidoService.RealizarPedido(pedidoDto);
 
-            var result = await _pedidoService.RealizarPedido(pedidoDto);
-
-            return Ok(result);
-            //}
-            //catch (Exception ex)
-            //{
-            //    return BadRequest(ex);
-            //}
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex);
+            }
 
         }
+
+        //[HttpPost("LiberarDronesParaEntrega")]
+        //public async Task<ActionResult> LiberarDronesParaEntrega()
+        //{
+        //    try
+        //    {
+        //        var drone = await _pedidoService.BuscarDrone();
+        //        //var result = await _pedidoService.LiberarDrones(drone);
+
+        //        //return Ok(result);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return BadRequest(ex);
+        //    }
+
+        //}
 
     }
 }

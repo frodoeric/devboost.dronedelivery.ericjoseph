@@ -69,17 +69,19 @@ namespace devboost.dronedelivery.Service
                     {
                         var drone = dronesComCapacidade.FirstOrDefault();
                         pedido.Drone = drone;
-                        pedido.StatusPedido = StatusPedido.despachado;
+                        pedido.StatusPedido = StatusPedido.aguardandoPedido;
 
-                        drone = AtualizaStatusDrone(drone, distance);
+                        drone = AtualizaStatusDrone(drone, distance, pedido.Peso);
                         
                         await _pedidoRepository.AddPedido(pedido);
                         await _droneRepository.UpdateDrone(drone);
                     }
                     else
                     {
-                        pedido.StatusPedido = StatusPedido.reprovado;
+                        pedido.StatusPedido = StatusPedido.naoHaDronesDisponiveis;
                         await _pedidoRepository.AddPedido(pedido);
+
+                        throw new Exception("Não há mais drones disponíveis");
                     }
                     //trans.Complete();
                     return pedido;
@@ -87,23 +89,27 @@ namespace devboost.dronedelivery.Service
             }
             catch (Exception ex)
             {
-
-                throw;
+                throw ex;
             }
             
         }
 
-        private Drone AtualizaStatusDrone(Drone drone, double distance)
+        public async Task LiberarDrones(List<Drone> drones)
         {
-            drone.StatusDrone = StatusDrone.emTrajeto;
+
+            //await _droneRepository.UpdateDrone(drones);
+        }
+
+        private Drone AtualizaStatusDrone(Drone drone, double distance, int peso)
+        {
+            drone.StatusDrone = StatusDrone.disponivelParaEntrega;
 
             var autonimiaDistancia = ((drone.Autonomia * drone.Carga) / 100) * drone.Velocidade;
             var distanciaPercorrida = autonimiaDistancia - distance;
             var cargaUsada = distanciaPercorrida / drone.Velocidade;
+            
             drone.Carga -= Convert.ToInt32(cargaUsada);
-
-            //tenho 100km andei 70km me resta 30 quantos porcento?
-            //
+            drone.Capacidade -= peso;
 
             return drone;
         }

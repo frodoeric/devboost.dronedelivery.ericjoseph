@@ -20,8 +20,9 @@ namespace devboost.dronedelivery.Model
     {
         aguardandoAprovacao = 0,
         reprovado = 1,
-        aguardandoEntrega = 2,
-        despachado = 3,
-        entregue = 4
+        aguardandoPedido = 2,
+        saiuPraEntrega = 3,
+        entregue = 4,
+        naoHaDronesDisponiveis = 5
     }
 }
